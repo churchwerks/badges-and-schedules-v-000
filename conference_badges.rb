@@ -17,15 +17,11 @@ def assign_rooms(attendees)
 end
 
 def printer(attendees)
-  print_name = batch_badge_creator(attendees)
-  print_name.each {|badge| puts "#{badge}"}
-  print_room = assign_rooms(attendees)
-  print_room.each {|room| puts "#{room}"}
+  puts "#{$badge}"
+  puts "#{$room_assignments}"
 end
 
 badge_maker(attendees)
 batch_badge_creator(attendees)
 assign_rooms(attendees)
-binding.pry
 printer(attendees)
-binding.pry
